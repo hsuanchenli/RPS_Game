@@ -1,6 +1,6 @@
 ## RPS_Game
 
-#Usage:=
+#Usage:
 1. cd into project source
 ==
 2. sbt run
