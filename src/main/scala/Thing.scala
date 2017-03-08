@@ -1,29 +1,29 @@
 package com.example
-class Thing
-trait Beat{
-  def beat(x: Beat, y: Beat) = ???
+class Thing {
+  def beat(x: Thing, y: Thing) = ???
 }
-class Rock extends Thing with Beat  {
+
+class Rock extends Thing   {
   override def toString: String = "Rock"
-  override def beat(x: Beat, y: Beat):Beat = x.toString() match {
-    case "Rock" => ???
-    case "Paper" => y
-    case "Scissor" => x
+  def beat(y: Thing):Option[Thing]= y.toString() match {
+    case "Rock" =>  None
+    case "Paper" => Some(y)
+    case "Scissor" => Some(this)
   }
 }
-class Paper extends Beat {
+class Paper extends Thing{
   override def toString: String = "Paper"
-  override def beat(x: Beat, y: Beat):Beat = x.toString() match {
-    case "Rock" => ???
-    case "Paper" => y
-    case "Scissor" => x
+  def beat(y: Thing) = y.toString() match {
+    case "Rock" =>None
+    case "Paper" => Some(y)
+    case "Scissor" => Some(this)
   }
 }
-class Scissor extends Beat {
+class Scissor extends Thing {
   override def toString: String = "Scissor"
-  override def beat(x: Beat, y: Beat):Beat = x.toString() match {
-    case "Rock" => ???
-    case "Paper" => y
-    case "Scissor" => x
+  def beat(y: Thing)= y.toString() match {
+    case "Rock" => None
+    case "Paper" => Some(y)
+    case "Scissor" => Some(this)
   }
 }

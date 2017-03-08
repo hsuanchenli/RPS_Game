@@ -19,19 +19,19 @@ class Duel {
   import Duel._
   def beat(x: Thing, y: Thing) = x match {
     case Rock => y match {
-      case Rock => Nil
-      case Paper => y
-      case Scissor => x
+      case Rock => None
+      case Paper => Some(y)
+      case Scissor => Some(x)
     }
     case Paper => y match {
-      case Rock => x
-      case Paper => Nil
-      case Scissor => y
+      case Rock => Some(x)
+      case Paper => None
+      case Scissor => Some(y)
     }
     case Scissor => y match {
-      case Rock => y
-      case Paper => x
-      case Scissor => Nil
+      case Rock => Some(y)
+      case Paper => Some(x)
+      case Scissor => None
     }
   }
 }

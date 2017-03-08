@@ -4,7 +4,7 @@
 		module="rps_game-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170307220810"
+		publication="20170308211156"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
