@@ -4,8 +4,9 @@
 package pattern_matching
 
 object Duel {
-  sealed trait Thing{
-    def beat(x:Thing, y:Thing) = ???
+
+  sealed trait Thing {
+    def beat(x: Thing, y: Thing) = ???
   }
 
   case object Rock extends Thing
@@ -13,10 +14,13 @@ object Duel {
   case object Paper extends Thing
 
   case object Scissor extends Thing
+
 }
 
 class Duel {
+
   import Duel._
+
   def beat(x: Thing, y: Thing) = x match {
     case Rock => y match {
       case Rock => None
