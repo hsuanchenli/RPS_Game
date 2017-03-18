@@ -5,9 +5,7 @@ package pattern_matching
 
 object Duel {
 
-  sealed trait Thing {
-    def beat(x: Thing, y: Thing) = ???
-  }
+  sealed trait Thing
 
   case object Rock extends Thing
 
