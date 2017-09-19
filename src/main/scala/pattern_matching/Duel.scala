@@ -37,5 +37,3 @@ class Duel {
     }
   }
 }
-
-//teset
